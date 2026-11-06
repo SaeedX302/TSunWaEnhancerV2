@@ -1,5 +1,6 @@
 [Added]
-- Added support for version 2.26.43.xx
+- Added support for version 2.26.44.xx
+- Added support for version 2.26.43.xx (was listed here before but missing from the version gate in arrays.xml, so it was not actually admitted — fixed now)
 - Time Format (12/24 hours) for timestamp
 - In-App Screenshot / Screen Recording restrictions bypass
 - Send seen to specific Status
@@ -46,6 +47,7 @@
 
 
 [Notes]
+- Version-gate only: admitting 2.26.43.xx / 2.26.44.xx lets VersionGuard pass, it does not prove every hook works on those builds. DexKit anchors, abProps IDs and host classes still need re-verification against the 2.26.44 DEX and device testing.
 ![Upcoming WhatsApp floating bottom bar](https://raw.githubusercontent.com/WaEnhancerX/WaEnhancerX/main/samples/upcoming-whatsapp-floating-bar.jpeg)
 
 - Floating bar new features are inspired from WhatsApp's soon upcoming update of Floating bottom bar design.
