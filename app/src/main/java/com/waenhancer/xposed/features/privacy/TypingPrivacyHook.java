@@ -18,6 +18,13 @@ import java.lang.reflect.Method;
 /**
  * Typing Privacy: intercepts outgoing typing and voice recording presence notifications
  * ("composing" and "recording" presence packets sent to WhatsApp servers).
+ *
+ * <p>It can also fake the recording indicator: when "typing_as_recording" is enabled,
+ * an outgoing typing packet (state 0) is rewritten to a recording packet (state 1),
+ * so the other person sees "recording audio" while this user is only typing.
+ * Hiding typing (globally, per-contact, or via Ghost Mode) always wins over faking:
+ * a hidden packet is suppressed, never rewritten. State 2 (clear) is left alone so
+ * the indicator disappears when the user stops typing.
  */
 public class TypingPrivacyHook extends BaseFeature {
 
@@ -71,12 +78,15 @@ public class TypingPrivacyHook extends BaseFeature {
 
                     // Extract typing state: 0 = typing/composing, 1 = recording audio, 2 = clear
                     int state = -1;
+                    int stateArgIndex = -1;
                     Object jidObj = null;
 
-                    for (Object arg : param.args) {
+                    for (int i = 0; i < param.args.length; i++) {
+                        Object arg = param.args[i];
                         if (arg == null) continue;
                         if (arg instanceof Integer) {
                             state = (Integer) arg;
+                            stateArgIndex = i;
                         } else if (!(arg instanceof Boolean)) {
                             String className = arg.getClass().getName();
                             if (className.contains("Jid") || className.contains("jid") || !arg.getClass().isPrimitive()) {
@@ -109,6 +119,14 @@ public class TypingPrivacyHook extends BaseFeature {
                     // Block typing (state 0) and voice recording (state 1) indicators
                     if (blockThisPacket) {
                         param.setResult(null); // Suppress outgoing presence packet
+                    } else if (state == 0 && stateArgIndex >= 0
+                            && isEnabled("typing_as_recording", false)) {
+                        // Fake recording: rewrite the typing packet as a recording
+                        // packet so the other side sees "recording audio" instead of
+                        // "typing...". Only the state argument is changed; the JID
+                        // and the clear packet (state 2) are left untouched, so the
+                        // indicator clears normally when typing stops.
+                        param.args[stateArgIndex] = 1;
                     }
                 }
             });

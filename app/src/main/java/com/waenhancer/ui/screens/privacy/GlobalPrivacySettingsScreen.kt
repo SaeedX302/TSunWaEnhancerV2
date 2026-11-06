@@ -135,7 +135,7 @@ fun GlobalPrivacySettingsScreen(
     val privacyKeys = remember {
         listOf(
             "always_online", "online_status_indicator", "freeze_last_seen", "freezelastseen",
-            "ghostmode_enabled", "ghostmode", "ghostmode_t", "ghostmode_r", "typing_privacy",
+            "ghostmode_enabled", "ghostmode", "ghostmode_t", "ghostmode_r", "typing_privacy", "typing_as_recording",
             "hide_read_receipts", "hideread_group", "blueonreply", "seentick", "hide_delivery_receipts", "hide_seen_receipts", "hideonceseen",
             "stealth_status_view", "autonext_status", "toast_viewed_status",
             "anti_view_once", "downloadviewonce", "download_view_once",
