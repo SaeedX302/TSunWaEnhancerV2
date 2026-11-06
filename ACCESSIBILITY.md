@@ -56,7 +56,7 @@ We prioritize these areas in our roadmap and welcome community feedback to impro
 If you encounter any accessibility issues, barriers, or have suggestions on how we can improve usability:
 
 1. **GitHub Issues**:
-   - Open an issue using our [GitHub Issues Tracker](https://github.com/WaEnhancerX/WaEnhancerX/issues).
+   - Open an issue using our [GitHub Issues Tracker](https://github.com/SaeedX302/TSunWaEnhancerV2/issues).
    - Tag the issue with the `accessibility` / `a11y` label if possible.
    - Include details such as your device model, Android version, assistive tools in use (e.g., TalkBack version, font scale factor), and a description of the barrier.
 2. **Community Discussions**:

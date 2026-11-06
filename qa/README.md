@@ -31,8 +31,8 @@ whether a script is present in that revision.
 From the repository root, with **your own** installed/version-matched APK copies:
 
 ```sh
-python3 qa/audit_apks.py /path/to/WaEnhancerX.apk /path/to/WhatsApp.apk
-python3 qa/audit_apks.py /path/to/WaEnhancerX.apk /path/to/WhatsApp.apk --json
+python3 qa/audit_apks.py /path/to/TSunWaEnhancer.apk /path/to/WhatsApp.apk
+python3 qa/audit_apks.py /path/to/TSunWaEnhancer.apk /path/to/WhatsApp.apk --json
 python3 -m unittest discover -s qa -p 'test_audit_apks.py' -v
 ```
 

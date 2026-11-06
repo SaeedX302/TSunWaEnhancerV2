@@ -47,7 +47,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:windowSoftInputMode="adjustResize"
-        android:theme="@style/Theme.Waex">
+        android:theme="@style/Theme.TSunWaEnhancer">
 
         <receiver
             android:name="com.waenhancer.update.UpdateIgnoreReceiver"
@@ -89,7 +89,7 @@
         <activity
             android:name="com.waenhancer.app.PermissionsActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Waex.Splash"
+            android:theme="@style/Theme.TSunWaEnhancer.Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -36,7 +36,7 @@ android {
             "VERSION_CODE must be greater than the latest v1 version code ($lastV1VersionCode) to support upgrades."
         }
 
-        val devGh = project.findProperty("DEV_GH")?.toString()?.trim() ?: "mubashardev"
+        val devGh = project.findProperty("DEV_GH")?.toString()?.trim() ?: "tsunstudio"
         buildConfigField("String", "DEV_GH", "\"$devGh\"")
     }
 
@@ -134,7 +134,7 @@ android {
             val output = it as? ApkVariantOutput
             if (output != null) {
                 val suffix = if (variant.buildType.name == "debug") "_debug" else "_release"
-                output.outputFileName = "WaEnhancerX-v${variant.versionName}${suffix}.apk"
+                output.outputFileName = "TSunWaEnhancer-v${variant.versionName}${suffix}.apk"
             }
         }
     }
