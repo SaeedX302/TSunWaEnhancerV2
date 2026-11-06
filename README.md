@@ -1,24 +1,24 @@
 <div align="center">
 
-<img src="app/src/main/res/drawable/ic_app_logo.webp" alt="WaEnhancer X app logo" width="128" />
+<img src="app/src/main/res/drawable/ic_app_logo.webp" alt="TSunWaEnhancer app logo" width="128" />
 
-# WaEnhancer X
+# TSunWaEnhancer
 
 **UI customization, automation, and privacy engine for WhatsApp on Android**
 
-WaEnhancer X is an open-source Xposed/LSPosed module for WhatsApp & WhatsApp Business with privacy tools, anti-delete, view-once media, Meta AI removal, and UI customization.
+TSunWaEnhancer is an open-source Xposed/LSPosed module for WhatsApp & WhatsApp Business with privacy tools, anti-delete, view-once media, Meta AI removal, and UI customization.
 
 [![Android Platform](https://img.shields.io/badge/Platform-Android%20API%2024%2B-3DDC84?style=flat&logo=android&logoColor=white)](https://developer.android.com)
 [![Framework](https://img.shields.io/badge/Framework-LSPosed%20%7C%20Zygisk-orange?style=flat)](https://github.com/JingMatrix/LSPosed)
-[![WaEnhancerX Downloads](https://img.shields.io/github/downloads/WaEnhancerX/WaEnhancerX/total.svg?label=GitHub%20Downloads&color=blue)](https://github.com/WaEnhancerX/WaEnhancerX/releases)
+[![TSunWaEnhancer Downloads](https://img.shields.io/github/downloads/TSunWaEnhancer/TSunWaEnhancer/total.svg?label=GitHub%20Downloads&color=blue)](https://github.com/SaeedX302/TSunWaEnhancerV2/releases)
 [![LSPosed Repo Downloads](https://img.shields.io/github/downloads/xposed-Modules-Repo/com.waenhancer/total.svg?label=LSPosed%20Repo%20Downloads&color=purple)](https://github.com/xposed-Modules-Repo/com.waenhancer/releases)
-[![Telegram](https://telegram-badge.pages.dev/api/telegram-badge?channelId=@waenhancerx&label=WaEnhancerX%20Updates&showOnline=true)](https://t.me/waenhancerx)
-[![Telegram](https://telegram-badge.pages.dev/api/telegram-badge?channelId=@waenhancerxhub&label=WaEnhancerX%20Hub&showOnline=true)](https://t.me/waenhancerxhub)
+[![Telegram](https://telegram-badge.pages.dev/api/telegram-badge?channelId=@waenhancerx&label=TSunWaEnhancer%20Updates&showOnline=true)](https://t.me/waenhancerx)
+[![Telegram](https://telegram-badge.pages.dev/api/telegram-badge?channelId=@waenhancerxhub&label=TSunWaEnhancer%20Hub&showOnline=true)](https://t.me/waenhancerxhub)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Development Status](https://img.shields.io/badge/Status-Active%20Development-success.svg)](https://github.com/WaEnhancerX/WaEnhancerX)
+[![Development Status](https://img.shields.io/badge/Status-Active%20Development-success.svg)](https://github.com/SaeedX302/TSunWaEnhancerV2)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-**[Latest Release](https://github.com/WaEnhancerX/WaEnhancerX/releases/latest)** · **[Telegram Community](https://t.me/waenhancerx)** · **[Documentation](docs/ARCHITECTURE.md)** · **[Report Bug](https://github.com/WaEnhancerX/WaEnhancerX/issues)**
+**[Latest Release](https://github.com/SaeedX302/TSunWaEnhancerV2/releases/latest)** · **[Telegram Community](https://t.me/waenhancerx)** · **[Documentation](docs/ARCHITECTURE.md)** · **[Report Bug](https://github.com/SaeedX302/TSunWaEnhancerV2/issues)**
 
 </div>
 
@@ -26,14 +26,14 @@ WaEnhancer X is an open-source Xposed/LSPosed module for WhatsApp & WhatsApp Bus
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/chart?repos=waenhancerx/waenhancerx&type=date&legend=top-left)](https://www.star-history.com/?repos=waenhancerx%2Fwaenhancerx&type=date&legend=top-left)
+[![Star History Chart](https://api.star-history.com/chart?repos=SaeedX302%2FTSunWaEnhancerV2&type=date&legend=top-left)](https://www.star-history.com/?repos=SaeedX302%2FTSunWaEnhancerV2&type=date&legend=top-left)
 
 ---
 
 ## Contents
 
 - [Star History](#star-history)
-- [Why WaEnhancerX](#why-waenhancerx)
+- [Why TSunWaEnhancer](#why-tsunwaenhancer)
 - [About V2 Architecture](#about-v2-architecture)
 - [Key Features](#key-features)
 - [Compatibility & Supported Clients](#compatibility--supported-clients)
@@ -48,11 +48,11 @@ WaEnhancer X is an open-source Xposed/LSPosed module for WhatsApp & WhatsApp Bus
 
 ---
 
-## Why WaEnhancerX
+## Why TSunWaEnhancer
 
 Most WhatsApp modifications require replacing your official application with suspicious, closed-source third-party repackaged APKs. These third-party APKs pose major account security risks, break safety attestation, and often bundle unwanted bloatware or trackers.
 
-**WaEnhancerX takes the native Xposed framework approach:**
+**TSunWaEnhancer takes the native Xposed framework approach:**
 
 - **Zero Client Tampering:** Works directly on top of the unmodified, genuine WhatsApp client from Google Play.
 - **Deep System-Level Integration:** Injects settings natively into WhatsApp's internal preferences screen with full search engine support.
@@ -146,11 +146,11 @@ The [manifest](app/src/main/AndroidManifest.xml) declares the Xposed metadata an
 ## Installation Guide
 
 1. **Download:** Select the desired Debug or Release APK from
-   [GitHub Releases](https://github.com/WaEnhancerX/WaEnhancerX/releases) and read
+   [GitHub Releases](https://github.com/SaeedX302/TSunWaEnhancerV2/releases) and read
    that release's notes.
 2. **Install:** Install the APK on the Android device.
-3. **Activate:** Enable WaEnhancerX in the loaded framework's manager.
-4. **Set scope:** Enable **WaEnhancerX** (`com.waenhancer`) and the installed
+3. **Activate:** Enable TSunWaEnhancer in the loaded framework's manager.
+4. **Set scope:** Enable **TSunWaEnhancer** (`com.waenhancer`) and the installed
    target, such as `com.whatsapp` or `com.whatsapp.w4b`. System Framework (`android`)
    is not part of the declared scope in this source tree.
 5. **Restart and inspect:** Restart the selected processes as required by the
@@ -179,9 +179,9 @@ licensing commit, so recursive submodule initialization alone cannot supply it.
 Builders with access must obtain it separately:
 
 ```bash
-git clone https://github.com/WaEnhancerX/WaEnhancerX.git
-cd WaEnhancerX
-git clone https://github.com/mubashardev/waex-licensing.git licensing
+git clone https://github.com/SaeedX302/TSunWaEnhancerV2.git
+cd TSunWaEnhancer
+git clone https://github.com/tsunstudio/waex-licensing.git licensing
 ```
 
 Before building, select a compatible licensing revision supplied by the
@@ -193,8 +193,8 @@ signing properties as described in [CONTRIBUTING.md](CONTRIBUTING.md), then run:
 ```
 
 The configured output is
-`app/build/outputs/apk/debug/WaEnhancerX-v<VERSION_NAME>_debug.apk`; Release uses
-`app/build/outputs/apk/release/WaEnhancerX-v<VERSION_NAME>_release.apk`.
+`app/build/outputs/apk/debug/TSunWaEnhancer-v<VERSION_NAME>_debug.apk`; Release uses
+`app/build/outputs/apk/release/TSunWaEnhancer-v<VERSION_NAME>_release.apk`.
 `VERSION_NAME` comes from [gradle.properties](gradle.properties).
 
 Public-source checks can run without the private module or signing key. See
@@ -221,49 +221,49 @@ from historical design proposals and from checks requiring a full APK or device.
 
 ## Contributors
 
-Thank you to everyone who has contributed code, reported issues, tested builds, or improved the documentation for WaEnhancerX!
+Thank you to everyone who has contributed code, reported issues, tested builds, or improved the documentation for TSunWaEnhancer!
 
 Thanks go to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <table>
   <tr>
     <td align="center" valign="top" width="180">
-      <a href="https://github.com/mubashardev">
-        <img src="https://avatars.githubusercontent.com/u/72978007?v=4" width="100px" alt="Mubashar Dev" /><br />
-        <sub><b>Mubashar Dev</b></sub>
+      <a href="https://github.com/tsunstudio">
+        <img src="https://avatars.githubusercontent.com/u/72978007?v=4" width="100px" alt="TSun Studio" /><br />
+        <sub><b>TSun Studio</b></sub>
       </a><br />
-      <a href="https://github.com/WaEnhancerX/WaEnhancerX/commits?author=mubashardev" title="Code">💻</a>
-      <a href="https://github.com/WaEnhancerX/WaEnhancerX/pulls?q=is%3Apr+author%3Amubashardev" title="Project Management">📆</a>
-      <a href="https://github.com/WaEnhancerX/WaEnhancerX/commits?author=mubashardev" title="Documentation">📖</a>
-      <a href="https://github.com/WaEnhancerX/WaEnhancerX/releases" title="Maintenance">🚧</a>
+      <a href="https://github.com/SaeedX302/TSunWaEnhancerV2/commits?author=tsunstudio" title="Code">💻</a>
+      <a href="https://github.com/SaeedX302/TSunWaEnhancerV2/pulls?q=is%3Apr+author%3Atsunstudio" title="Project Management">📆</a>
+      <a href="https://github.com/SaeedX302/TSunWaEnhancerV2/commits?author=tsunstudio" title="Documentation">📖</a>
+      <a href="https://github.com/SaeedX302/TSunWaEnhancerV2/releases" title="Maintenance">🚧</a>
     </td>
     <td align="center" valign="top" width="180">
       <a href="https://github.com/TheKillerMax">
         <img src="https://avatars.githubusercontent.com/u/70108066?v=4" width="100px" alt="TheKillerMax" /><br />
         <sub><b>TheKillerMax</b></sub>
       </a><br />
-      <a href="https://github.com/WaEnhancerX/WaEnhancerX/commits?author=TheKillerMax" title="Code">💻</a>
-      <a href="https://github.com/WaEnhancerX/WaEnhancerX/pulls?q=is%3Apr+author%3ATheKillerMax" title="Testing">⚠️</a>
-      <a href="https://github.com/WaEnhancerX/WaEnhancerX/commits?author=TheKillerMax" title="Documentation">📖</a>
+      <a href="https://github.com/SaeedX302/TSunWaEnhancerV2/commits?author=TheKillerMax" title="Code">💻</a>
+      <a href="https://github.com/SaeedX302/TSunWaEnhancerV2/pulls?q=is%3Apr+author%3ATheKillerMax" title="Testing">⚠️</a>
+      <a href="https://github.com/SaeedX302/TSunWaEnhancerV2/commits?author=TheKillerMax" title="Documentation">📖</a>
     </td>
     <td align="center" valign="top" width="180">
       <a href="https://github.com/wilsonmilson">
         <img src="https://avatars.githubusercontent.com/u/98002834?v=4" width="100px" alt="wilson meow" /><br />
         <sub><b>wilson meow</b></sub>
       </a><br />
-      <a href="https://github.com/WaEnhancerX/WaEnhancerX/pull/49" title="Translation">🌍</a>
+      <a href="https://github.com/SaeedX302/TSunWaEnhancerV2/pull/49" title="Translation">🌍</a>
     </td>
     <td align="center" valign="top" width="180">
       <a href="https://github.com/damjang">
         <img src="https://avatars.githubusercontent.com/u/1283609?v=4" width="100px" alt="damjang" /><br />
         <sub><b>damjang</b></sub>
       </a><br />
-      <a href="https://github.com/WaEnhancerX/WaEnhancerX/pull/58" title="Translation">🌍</a>
+      <a href="https://github.com/SaeedX302/TSunWaEnhancerV2/pull/58" title="Translation">🌍</a>
     </td>
   </tr>
 </table>
 
-See the complete [GitHub contribution history](https://github.com/WaEnhancerX/WaEnhancerX/graphs/contributors).
+See the complete [GitHub contribution history](https://github.com/SaeedX302/TSunWaEnhancerV2/graphs/contributors).
 
 <div align="center">
 
@@ -289,7 +289,7 @@ Join the community, contribute improvements, or review our standards:
 
 Please read this disclaimer carefully before using the software:
 
-- **Educational & Research Purpose:** WaEnhancerX is a proof-of-concept project intended strictly for reverse-engineering research, Android UI/UX experimentation, and educational purposes.
+- **Educational & Research Purpose:** TSunWaEnhancer is a proof-of-concept project intended strictly for reverse-engineering research, Android UI/UX experimentation, and educational purposes.
 - **No Affiliation:** This project is independent and is not affiliated with, authorized, sponsored, or endorsed by Meta Platforms, WhatsApp LLC, or any of their affiliates.
 - **Use at Your Own Discretion:** Modifying client runtimes may violate third-party Terms of Service. The maintainers and contributors assume no liability for account bans, data loss, device instability, or any consequences resulting from the use of this tool.
 
@@ -297,10 +297,10 @@ Please read this disclaimer carefully before using the software:
 
 ## License
 
-WaEnhancerX is distributed under the terms of the **[Apache License 2.0](LICENSE)**.
+TSunWaEnhancer is distributed under the terms of the **[Apache License 2.0](LICENSE)**.
 
 ```text
-Copyright 2026 Mubashar Dev and the WaEnhancerX Organization.
+Copyright 2026 TSun Studio and the TSunWaEnhancer Organization.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

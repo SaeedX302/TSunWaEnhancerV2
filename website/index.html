@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSunWaEnhancer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header / Date Bar -->
+    <header class="header">
+        <div class="container header-inner">
+            <button class="nav-btn" aria-label="Previous"><span class="arrow">&lt;</span></button>
+            <div class="date-block">
+                <h1 class="date-main">Friday, 6</h1>
+                <p class="date-sub">3 pending items</p>
+            </div>
+            <button class="nav-btn" aria-label="Next"><span class="arrow">&gt;</span></button>
+        </div>
+    </header>
+    <!-- Day Picker -->
+    <nav class="day-picker">
+        <div class="container">
+            <ul class="day-list" role="tablist" aria-label="Days of week">
+                <li class="day-item" role="tab" aria-selected="false">Mon <span class="day-num">2</span></li>
+                <li class="day-item" role="tab" aria-selected="false">Tue <span class="day-num">3</span></li>
+                <li class="day-item" role="tab" aria-selected="false">Wed <span class="day-num">4</span></li>
+                <li class="day-item" role="tab" aria-selected="false">Thu <span class="day-num">5</span></li>
+                <li class="day-item active" role="tab" aria-selected="true">Fri <span class="day-num">6</span></li>
+                <li class="day-item" role="tab" aria-selected="false">Sat <span class="day-num">7</span></li>
+                <li class="day-item" role="tab" aria-selected="false">Sun <span class="day-num">8</span></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container main-inner">
+
+            <!-- Task List Column -->
+            <section class="task-column">
+                <h2 class="section-title">Task List</h2>
+                <div class="task-list">
+                    <article class="task-card done">
+                        <div class="task-info">
+                            <h3 class="task-title">Gather References</h3>
+                            <p class="task-time">10:00 AM – 11:00 AM</p>
+                        </div>
+                        <div class="task-actions">
+                            <span class="check check-on">&#10003;</span>
+                        </div>
+                    </article>
+
+                    <article class="task-card pending">
+                        <div class="task-info">
+                            <h3 class="task-title">Team Meeting</h3>
+                            <p class="task-time">11:00 AM – 1:00 PM</p>
+                        </div>
+                        <div class="task-actions">
+                            <span class="check check-off">&#9633;</span>
+                        </div>
+                    </article>
+
+                    <article class="task-card pending">
+                        <div class="task-info">
+                            <h3 class="task-title">Landing Page Design</h3>
+                            <p class="task-time">1:30 PM – 2:30 PM</p>
+                        </div>
+                        <div class="task-actions">
+                            <span class="check check-off">&#9633;</span>
+                        </div>
+                    </article>
+
+                    <article class="task-card pending">
+                        <div class="task-info">
+                            <h3 class="task-title">Lunch Break</h3>
+                            <p class="task-time">2:30 PM – 3:30 PM</p>
+                        </div>
+                        <div class="task-actions">
+                            <span class="check check-off">&#9633;</span>
+                        </div>
+                    </article>
+
+                    <article class="task-card pending">
+                        <div class="task-info">
+                            <h3 class="task-title">Create Wireframes</h3>
+                            <p class="task-time">4:00 PM – 5:00 PM</p>
+                        </div>
+                        <div class="task-actions">
+                            <span class="check check-off">&#9633;</span>
+                        </div>
+                    </article>
+                </div>
+
+                <button class="add-btn" aria-label="Add new task">
+                    <span class="add-icon">+</span>
+                    <span class="add-label">New Task</span>
+                </button>
+            </section>
+
+            <!-- Stats Column -->
+            <section class="stats-column">
+                <div class="stat-card progress-card">
+                    <div class="circle-wrap">
+                        <svg class="circle-svg" width="160" height="160" viewBox="0 0 160 160">
+                            <circle class="circle-bg" cx="80" cy="80" r="68"></circle>
+                            <circle class="circle-progress" cx="80" cy="80" r="68" stroke-dasharray="427" stroke-dashoffset="341"></circle>
+                        </svg>
+                        <div class="circle-content">
+                            <span class="circle-percent">20%</span>
+                            <span class="circle-label">completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card stat-item">
+                    <div class="stat-label">Tasks Completed</div>
+                    <div class="stat-value">32</div>
+                </div>
+
+                <div class="stat-card stat-item">
+                    <div class="stat-label">Tasks Remaining</div>
+                    <div class="stat-value">6</div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

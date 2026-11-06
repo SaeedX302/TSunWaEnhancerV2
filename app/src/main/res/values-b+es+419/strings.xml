@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">"Wa Enhancer X"</string>
+    <string name="app_name">"TSunWaEnhancer"</string>
     <string name="xposed_description">"Módulo de mejoras para WhatsApp y WhatsApp Business."</string>
     <string name="about_title">"Acerca de y créditos"</string>
-    <string name="maintainer">"mubashardev"</string>
-    <string name="developer">"Desarrollado por Mubashar Dev"</string>
+    <string name="maintainer">"TSun Studio"</string>
+    <string name="developer">"Desarrollado por TSun Studio"</string>
     <string name="about_section_title">"Acerca de"</string>
-    <string name="about_info">"WaEnhancer X es un módulo avanzado de Xposed diseñado y desarrollado por Mubashar Dev. Mejora tu experiencia en WhatsApp con funciones de privacidad, opciones de personalización visual y herramientas avanzadas."</string>
+    <string name="about_info">"TSunWaEnhancer es un módulo avanzado de Xposed diseñado y desarrollado por TSun Studio. Mejora tu experiencia en WhatsApp con funciones de privacidad, opciones de personalización visual y herramientas avanzadas."</string>
     <string name="installation">"Instalación"</string>
-    <string name="installation_desc">"1. Asegúrate de que tu dispositivo tenga acceso de superusuario.\n2. Instala el entorno Xposed en tu dispositivo.\n3. Descarga WaEnhancer X desde la sección Actions de GitHub.\n4. Instala el APK de WaEnhancer X.\n5. Activa el módulo WaEnhancer X en la aplicación Xposed Installer."</string>
+    <string name="installation_desc">"1. Asegúrate de que tu dispositivo tenga acceso de superusuario.\n2. Instala el entorno Xposed en tu dispositivo.\n3. Descarga TSunWaEnhancer desde la sección Actions de GitHub.\n4. Instala el APK de TSunWaEnhancer.\n5. Activa el módulo TSunWaEnhancer en la aplicación Xposed Installer."</string>
     <string name="community">"Comunidad"</string>
     <string name="go_to_telegram">"Canal de Telegram"</string>
     <string name="go_to_github">"Reportes en GitHub"</string>
     <string name="contributors">"Colaboradores"</string>
     <string name="stargazers_title">"Quienes apoyan el proyecto"</string>
-    <string name="stargazers_thank_you">"Gracias por apoyar a WaEnhancerX"</string>
+    <string name="stargazers_thank_you">"Gracias por apoyar a TSunWaEnhancer"</string>
     <string name="stargazers_message">"Cada estrella ayuda a que más personas descubran el proyecto. Este espacio reconoce a quienes han mostrado su apoyo."</string>
     <string name="support">"Ayuda"</string>
-    <string name="support_desc">"Si tienes algún problema o alguna pregunta sobre WaEnhancer X, visita nuestro canal de Telegram."</string>
+    <string name="support_desc">"Si tienes algún problema o alguna pregunta sobre TSunWaEnhancer, visita nuestro canal de Telegram."</string>
     <string name="license">"Licencia"</string>
-    <string name="license_desc">"Este proyecto se distribuye bajo la licencia Apache 2.0. Consulta el archivo LICENSE para obtener más información.\n\nMubashar Dev desarrolla WaEnhancer X de forma independiente. No está afiliado ni asociado con WhatsApp Inc. o Meta Platforms, Inc., ni cuenta con su respaldo. Este proyecto se ofrece \"tal cual\" con fines educativos y de investigación. Úsalo bajo tu propia responsabilidad. El uso indebido de esta herramienta puede tener consecuencias legales."</string>
+    <string name="license_desc">"Este proyecto se distribuye bajo la licencia Apache 2.0. Consulta el archivo LICENSE para obtener más información.\n\nTSun Studio desarrolla TSunWaEnhancer de forma independiente. No está afiliado ni asociado con WhatsApp Inc. o Meta Platforms, Inc., ni cuenta con su respaldo. Este proyecto se ofrece \"tal cual\" con fines educativos y de investigación. Úsalo bajo tu propia responsabilidad. El uso indebido de esta herramienta puede tener consecuencias legales."</string>
     <string name="show_message_device_source">"Mostrar el dispositivo de origen del mensaje"</string>
     <string name="show_message_device_source_sum">"Indica si el mensaje se envió desde el dispositivo principal o desde uno vinculado"</string>
     <string name="message_sent_via_phone">"Este mensaje se envió desde un teléfono"</string>
@@ -32,7 +32,7 @@
     <string name="nav_search">"Buscar"</string>
     <string name="module_settings_title">"Ajustes del módulo"</string>
     <string name="app_theme_title">"Tema de la aplicación"</string>
-    <string name="app_theme_desc">"Elige la apariencia de WAEX"</string>
+    <string name="app_theme_desc">"Elige la apariencia de TSunWaEnhancer"</string>
     <string name="choose_app_theme">"Elegir el tema de la aplicación"</string>
     <string name="theme_follow_system">"Usar el del sistema"</string>
     <string name="theme_light">"Claro"</string>
@@ -60,7 +60,7 @@
     <string name="filter_all">"Todos"</string>
     <string name="requires_pro">"Requiere Pro"</string>
     <string name="pro_feature_tag">"Pro"</string>
-    <string name="dashboard_title">"WaEnhancerX"</string>
+    <string name="dashboard_title">"TSunWaEnhancer"</string>
     <string name="module_active">"Módulo activo"</string>
     <string name="module_inactive">"Módulo inactivo"</string>
     <string name="module_active_version">"Módulo activo • v%s"</string>
@@ -155,7 +155,7 @@
     <string name="feat_show_dndmode_desc">"Agrega el botón del modo No molestar a la barra de herramientas de inicio"</string>
     <string name="feat_restartbutton_title">"Mostrar el botón de reinicio"</string>
     <string name="feat_restartbutton_desc">"Agrega un botón en la pantalla de inicio para reiniciar la aplicación"</string>
-    <string name="feat_open_wae_title">"Mostrar el botón de WAEX"</string>
+    <string name="feat_open_wae_title">"Mostrar el botón de TSunWaEnhancer"</string>
     <string name="feat_open_wae_desc">"Agrega un botón en el inicio o los ajustes de WhatsApp para abrir Wa Enhancer"</string>
     <string name="feat_message_bomber_title">"Envío de mensajes en secuencia"</string>
     <string name="feat_message_bomber_desc">"Envía una secuencia corta de mensajes con pausas desde una conversación de WhatsApp"</string>

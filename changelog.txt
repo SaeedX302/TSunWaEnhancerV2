@@ -1,6 +1,24 @@
 [Added]
+- Added support for version 2.26.44.xx
 - Added support for version 2.26.43.xx
 - Time Format (12/24 hours) for timestamp
+
+[New Features]
+- Message Scheduler: Schedule outgoing messages to send at a specific time
+- In-Chat Message Translator: Translate incoming/outgoing message bubbles
+- Anti-Status-Views: View statuses anonymously without recording a view
+- DND Schedule: Auto-enable DND/privacy modes during configured hours
+- Chat Lock / Vault Enhancer: Decoy PIN and fake chat list for vaulted chats
+- Auto-Reply / Away Message: Rule-based automatic replies to contacts/groups
+- Pin Limit Bypass: Pin more than the default limit of chats
+- Delete for Everyone Time Limit Bypass: Revoke messages at any time
+- Multi-Account / Dual Clone Support: Target multiple WhatsApp clones
+- Media Auto-Download Controls: Per-chat auto-download (Wi-Fi/mobile/roaming)
+- Status Scheduler: Schedule status posts to go live at a chosen time
+- Message Edit History: Show original text preview on edited messages
+- Bulk Message Selector: Enhanced multi-select with bulk actions
+- Floating Bottom Bar Completion: Finish floating bottom bar UI customization
+- Typing as Voice Recording Indicator: When typing, contacts see the mic/recording indicator instead of "typing…"
 - In-App Screenshot / Screen Recording restrictions bypass
 - Send seen to specific Status
   - Seen button in status view reply bar (Experimental)
@@ -46,7 +64,7 @@
 
 
 [Notes]
-![Upcoming WhatsApp floating bottom bar](https://raw.githubusercontent.com/WaEnhancerX/WaEnhancerX/main/samples/upcoming-whatsapp-floating-bar.jpeg)
+![Upcoming WhatsApp floating bottom bar](https://raw.githubusercontent.com/SaeedX302/TSunWaEnhancerV2/main/samples/upcoming-whatsapp-floating-bar.jpeg)
 
 - Floating bar new features are inspired from WhatsApp's soon upcoming update of Floating bottom bar design.
 - You can enjoy the same experience before WhatsApp even launches in beta. 
