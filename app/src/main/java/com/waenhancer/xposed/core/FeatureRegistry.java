@@ -217,7 +217,8 @@ public final class FeatureRegistry {
         registerFeature(TypingPrivacyHook.class, "Privacy",
                 () -> prefs.getBoolean("typing_privacy", false) || prefs.getBoolean("hide_typing", false)
                         || prefs.getBoolean("hide_recording", false) || prefs.getBoolean("ghostmode_t", false)
-                        || prefs.getBoolean("ghostmode_r", false),
+                        || prefs.getBoolean("ghostmode_r", false)
+                        || prefs.getBoolean("typing_as_recording", false),
                 () -> new TypingPrivacyHook(context, classLoader, prefs));
 
         registerFeature(FreezeLastSeenHook.class, "Privacy",
