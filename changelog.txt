@@ -18,6 +18,7 @@
 - Message Edit History: Show original text preview on edited messages
 - Bulk Message Selector: Enhanced multi-select with bulk actions
 - Floating Bottom Bar Completion: Finish floating bottom bar UI customization
+- Typing as Voice Recording Indicator: When typing, contacts see the mic/recording indicator instead of "typing…"
 - In-App Screenshot / Screen Recording restrictions bypass
 - Send seen to specific Status
   - Seen button in status view reply bar (Experimental)

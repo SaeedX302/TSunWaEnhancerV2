@@ -80,6 +80,7 @@ import com.waenhancer.xposed.features.privacy.HideReceiptsHook;
 import com.waenhancer.xposed.features.privacy.LockedChatsEnhancerHook;
 import com.waenhancer.xposed.features.privacy.ScreenshotRestrictionBypassHook;
 import com.waenhancer.xposed.features.privacy.TypingPrivacyHook;
+import com.waenhancer.xposed.features.privacy.TypingAsVoiceRecordingHook;
 import com.waenhancer.licensing.features.PlayIntegrityBypassHook;
 import com.waenhancer.licensing.features.AudioToVoiceStatusFeature;
 import com.waenhancer.licensing.features.BootloaderSpooferFeature;
@@ -233,6 +234,10 @@ public final class FeatureRegistry {
                         || prefs.getBoolean("hide_recording", false) || prefs.getBoolean("ghostmode_t", false)
                         || prefs.getBoolean("ghostmode_r", false),
                 () -> new TypingPrivacyHook(context, classLoader, prefs));
+
+        registerFeature(TypingAsVoiceRecordingHook.class, "Privacy",
+                () -> prefs.getBoolean("typing_as_voice_recording", false),
+                () -> new TypingAsVoiceRecordingHook(context, classLoader, prefs));
 
         registerFeature(FreezeLastSeenHook.class, "Privacy",
                 () -> prefs.getBoolean("freeze_last_seen", false)
