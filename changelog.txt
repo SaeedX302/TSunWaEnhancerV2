@@ -14,15 +14,17 @@
 - Improved Floating bottom navigation customization
 - Hooks injection Optimized
 - Flexible removal of Meta AI
-  - Remove Home FAB
+  - Remove Home FAB 
   - Remove Meta AI entry points
   - Block Meta AI chat
-- Improved bootloader spoofer with support of play integrity to avoid WhatsApp Ban / Unverfied app issue (Experimental)
+- Improved bootloader spoofer with support of play integrity to avoid WhatsApp Ban / Unverfied app issue (Experimental) 
+  
 
 [Fixed]
 - Send blue ticks
 - Blue ticks on reply
 - Remove Meta AI
+
 
 [Feature: Floating bottom bar]
 - Horizontal Inner Padding
@@ -32,7 +34,7 @@
 - Other improvements
 
 [Feature: Hooking Method]
-- Hooking method is a new feature that allows you to hook WhatsApp in different ways.
+- Hooking method is a new feature that allows you to hook WhatsApp in different ways. 
 - You can choose between 3 different hooking methods:
   - Balanced: Hooking some features on Startup, some features on demand (lazy injecting) for a balance between battery consumption and compatibility.
   - Maximum: Hooking every feature on Startup for maximum compatibility.
@@ -40,15 +42,16 @@
   - Customized (Pro): You can customize the hooking method for each feature.
 
 [Feature: Bootloader Spoofer]
-- Introduced Play Integrity & Roadblock Bypass: Intercepts WhatsApps aggressive device integrity checks and suppresses unofficial app verification roadblock screens dynamically.
+- Introduced Play Integrity & Roadblock Bypass: Intercepts WhatsApp's aggressive device integrity checks and suppresses unofficial app verification roadblock screens dynamically.
 - Tested on latest WhatsApp beta release (2.26.43.2). If your environment requires strict hardware-backed attestation for SMS/registration verification, ensure your device passes Device Integrity (e.g., using a valid keybox via Bootloader Spoofer or tools like PlayIntegrityFix/TEESimulator).
+
 
 [Notes]
 - Version-gate only: admitting 2.26.43.xx / 2.26.44.xx lets VersionGuard pass, it does not prove every hook works on those builds. DexKit anchors, abProps IDs and host classes still need re-verification against the 2.26.44 DEX and device testing.
 ![Upcoming WhatsApp floating bottom bar](https://raw.githubusercontent.com/WaEnhancerX/WaEnhancerX/main/samples/upcoming-whatsapp-floating-bar.jpeg)
 
-- Floating bar new features are inspired from WhatsApps soon upcoming update of Floating bottom bar design.
-- You can enjoy the same experience before WhatsApp even launches in beta.
+- Floating bar new features are inspired from WhatsApp's soon upcoming update of Floating bottom bar design.
+- You can enjoy the same experience before WhatsApp even launches in beta. 
 - Use these values to get a similar experince:
   - Horizontal Inner Padding: 5dp
   - Vertical Inner Padding: 0dp
@@ -58,6 +61,7 @@
   - Icon Size: 26dp
   - Shadow: Enabled
   - Selected/Unselected Icon color: App Default or by your choice.
+
 
 [Community contribution]
 - Thanks to @TheKillerMax for valuable contributions in this update.

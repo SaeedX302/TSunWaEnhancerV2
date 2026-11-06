@@ -36,9 +36,12 @@ not the current implementation.
 
 The validator reads `universal_supported_versions` from the WAEX package's
 resources, including when called inside a target process. At the documented
-commit, the built-in rules are `2.26.36.xx` through `2.26.41.xx`.
+commit, the built-in rules are `2.26.36.xx` through `2.26.44.xx`.
 [arrays.xml](../app/src/main/res/values/arrays.xml) is authoritative when those
-rules change. Rules may be exact strings or branch patterns ending in `.xx` or
+rules change. A matching rule admits the version to `FeatureRegistry`; it does
+not prove that every hook works on that host — DexKit anchors, abProps IDs and
+hardcoded host classes must still be re-verified against the new WhatsApp DEX
+and tested on a device before a release is trusted. Rules may be exact strings or branch patterns ending in `.xx` or
 `.*`; they are string/prefix matches, not a numeric minimum/maximum interval.
 
 | Decision | Feature initialization allowed? | Meaning |
