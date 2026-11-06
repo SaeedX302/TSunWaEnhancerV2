@@ -110,6 +110,8 @@
     <string name="feat_ghostmode_t_desc">Users cannot see that you are typing</string>
     <string name="feat_ghostmode_r_title">Hide Recording Audio</string>
     <string name="feat_ghostmode_r_desc">Users cannot see that you are recording audio</string>
+    <string name="feat_typing_as_recording_title">Show Recording Instead of Typing</string>
+    <string name="feat_typing_as_recording_desc">While you type, the other person sees recording audio instead of typing</string>
     <string name="feat_stealth_status_view_title">Hide Status View</string>
     <string name="feat_stealth_status_view_desc">View statuses without users knowing</string>
     <string name="manual_status_seen_section">STATUS VIEWING</string>

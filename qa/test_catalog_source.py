@@ -89,9 +89,9 @@ class CatalogSourceTest(unittest.TestCase):
         self.write(source=SOURCE.replace('"preference_catalog.json"','"../private.json"'));self.rejects()
     def test_unsupported_routing_rejected(self):
         self.write(source=SOURCE.replace('.distinctBy { it.key }','.distinctBy { it.groupId }'));self.rejects()
-    def test_current_tree_uses_asset_and_91_canonical_features(self):
+    def test_current_tree_uses_asset_and_92_canonical_features(self):
         rows=catalog_features(ROOT)
-        self.assertEqual(91,len(rows));self.assertEqual(91,len({r['key'] for r in rows}))
+        self.assertEqual(92,len(rows));self.assertEqual(92,len({r['key'] for r in rows}))
         by_key={r['key']:r for r in rows}
         self.assertNotIn('call_privacy',by_key)
         self.assertNotIn('always_typing',by_key)
@@ -99,6 +99,7 @@ class CatalogSourceTest(unittest.TestCase):
         self.assertNotIn('preserve_delete_for_me',by_key)
         self.assertNotIn('doubletap2like_emoji',by_key)
         self.assertEqual('system_compatibility',by_key['app_interface_size']['group_id'])
+        self.assertEqual('presence_online_visibility',by_key['typing_as_recording']['group_id'])
         self.assertEqual('home_layout_navigation',by_key['status_style']['group_id'])
         self.assertEqual('media_utility_downloader',by_key['download_view_once']['group_id'])
         self.assertEqual('media_quality_status',by_key['send_audio_as_voice_status']['group_id'])

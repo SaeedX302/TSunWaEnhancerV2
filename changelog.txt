@@ -1,5 +1,6 @@
 [Added]
 - Added support for version 2.26.43.xx
+- Show Recording Instead of Typing: when enabled, typing sends a recording-audio presence packet instead of a typing packet, so the other person sees "recording audio" while you type. Hiding typing (globally, per-contact, or via Ghost Mode) still wins and sends nothing; the indicator clears normally when you stop typing.
 - Time Format (12/24 hours) for timestamp
 - In-App Screenshot / Screen Recording restrictions bypass
 - Send seen to specific Status
