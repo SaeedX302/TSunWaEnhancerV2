@@ -14,16 +14,24 @@ import com.waenhancer.hooking.LazyHookCoordinator;
 import com.waenhancer.hooking.ScreenScopedFeature;
 import com.waenhancer.xposed.core.devkit.DexSearchEngine;
 import com.waenhancer.xposed.utils.ActivityTracker;
+import com.waenhancer.xposed.features.automation.AutoReplyHook;
+import com.waenhancer.xposed.features.automation.MultiAccountSupportHook;
 import com.waenhancer.xposed.features.automation.PresenceToastsHook;
 import com.waenhancer.xposed.features.automation.TaskerIntegrationHook;
 import com.waenhancer.xposed.features.conversation.AntiEditMessagesHook;
+import com.waenhancer.xposed.features.conversation.BulkMessageSelectorHook;
 import com.waenhancer.xposed.features.conversation.ChatBubbleColorsHook;
 import com.waenhancer.xposed.features.conversation.ChatLimitsBypassHook;
 import com.waenhancer.xposed.features.conversation.CopyStatusTextHook;
+import com.waenhancer.xposed.features.conversation.DeleteForEveryoneBypassHook;
 import com.waenhancer.xposed.features.conversation.DoubleTapReactionHook;
+import com.waenhancer.xposed.features.conversation.InChatTranslatorHook;
 import com.waenhancer.xposed.features.conversation.JumpFirstMessageHook;
 import com.waenhancer.xposed.features.conversation.MessageDeviceSourceHook;
+import com.waenhancer.xposed.features.conversation.MessageEditHistoryHook;
+import com.waenhancer.xposed.features.conversation.MessageSchedulerHook;
 import com.waenhancer.xposed.features.conversation.MinorFixesHook;
+import com.waenhancer.xposed.features.conversation.PinLimitBypassHook;
 import com.waenhancer.xposed.features.conversation.PreserveDeleteForMeHook;
 import com.waenhancer.xposed.features.conversation.StickerConfirmHook;
 import com.waenhancer.xposed.features.customization.ChannelRecommendationsFilterHook;
@@ -33,6 +41,7 @@ import com.waenhancer.xposed.features.customization.CustomTimeHook;
 import com.waenhancer.xposed.features.customization.CssThemeHook;
 import com.waenhancer.xposed.features.customization.FilterItemsHook;
 import com.waenhancer.xposed.features.customization.FloatingBottomBarHook;
+import com.waenhancer.xposed.features.customization.FloatingBottomBarCompletionHook;
 import com.waenhancer.xposed.features.customization.OnlinePresenceIndicatorsHook;
 import com.waenhancer.xposed.features.customization.HideHomeTabsHook;
 import com.waenhancer.xposed.features.customization.IGStatusHook;
@@ -44,20 +53,25 @@ import com.waenhancer.xposed.features.homescreen.ChatListCustomizationsHook;
 import com.waenhancer.xposed.features.homescreen.HomeScreenHeaderActionsHook;
 import com.waenhancer.xposed.features.media.CallRecordingHook;
 import com.waenhancer.xposed.features.media.DownloadViewOnceHook;
+import com.waenhancer.xposed.features.media.MediaAutoDownloadHook;
 import com.waenhancer.xposed.features.media.MediaPreviewHook;
 import com.waenhancer.xposed.features.media.MediaQualityBypassHook;
 import com.waenhancer.xposed.features.media.ProfilePhotoDownloadHook;
 import com.waenhancer.xposed.features.media.ProximitySensorHook;
 import com.waenhancer.xposed.features.media.StatusDownloadHook;
+import com.waenhancer.xposed.features.media.StatusSchedulerHook;
 import com.waenhancer.xposed.features.privacy.AlwaysOnlineHook;
 import com.waenhancer.xposed.features.privacy.AntiDisappearingMessagesHook;
 import com.waenhancer.xposed.features.privacy.AntiRevokeHook;
+import com.waenhancer.xposed.features.privacy.AntiStatusViewsHook;
 import com.waenhancer.xposed.features.privacy.AntiViewOnceHook;
 import com.waenhancer.xposed.features.privacy.AutoNextStatusHook;
 import com.waenhancer.xposed.features.privacy.BlueOnReplyHook;
 import com.waenhancer.xposed.features.privacy.CallPrivacyHook;
+import com.waenhancer.xposed.features.privacy.ChatLockVaultEnhancerHook;
 import com.waenhancer.xposed.features.privacy.CustomPrivacyHook;
 import com.waenhancer.xposed.features.privacy.DndModeHook;
+import com.waenhancer.xposed.features.privacy.DndScheduleHook;
 import com.waenhancer.xposed.features.privacy.FreezeLastSeenHook;
 import com.waenhancer.xposed.features.privacy.HideArchivedChatsHook;
 import com.waenhancer.xposed.features.privacy.HideChatsVaultHook;
@@ -287,6 +301,18 @@ public final class FeatureRegistry {
                 () -> prefs.getBoolean("hide_chats", false),
                 () -> new HideChatsVaultHook(context, classLoader, prefs));
 
+        registerFeature(AntiStatusViewsHook.class, "Privacy",
+                () -> prefs.getBoolean("anti_status_views", false),
+                () -> new AntiStatusViewsHook(context, classLoader, prefs));
+
+        registerFeature(ChatLockVaultEnhancerHook.class, "Privacy",
+                () -> prefs.getBoolean("chat_lock_vault_enhancer", false),
+                () -> new ChatLockVaultEnhancerHook(context, classLoader, prefs));
+
+        registerFeature(DndScheduleHook.class, "Privacy",
+                () -> prefs.getBoolean("dnd_schedule", false),
+                () -> new DndScheduleHook(context, classLoader, prefs));
+
         // Conversation & Message Controls
         registerFeature(AntiEditMessagesHook.class, "Conversation",
                 () -> prefs.getBoolean("anti_edit", false) || prefs.getBoolean("antieditmessages", false),
@@ -326,6 +352,30 @@ public final class FeatureRegistry {
 
         registerFeature(MinorFixesHook.class, "Conversation",
                 () -> new MinorFixesHook(context, classLoader, prefs));
+
+        registerFeature(BulkMessageSelectorHook.class, "Conversation",
+                () -> prefs.getBoolean("bulk_message_selector", false),
+                () -> new BulkMessageSelectorHook(context, classLoader, prefs));
+
+        registerFeature(DeleteForEveryoneBypassHook.class, "Conversation",
+                () -> prefs.getBoolean("delete_for_everyone_bypass", false),
+                () -> new DeleteForEveryoneBypassHook(context, classLoader, prefs));
+
+        registerFeature(InChatTranslatorHook.class, "Conversation",
+                () -> prefs.getBoolean("in_chat_translator", false),
+                () -> new InChatTranslatorHook(context, classLoader, prefs));
+
+        registerFeature(MessageEditHistoryHook.class, "Conversation",
+                () -> prefs.getBoolean("message_edit_history", false),
+                () -> new MessageEditHistoryHook(context, classLoader, prefs));
+
+        registerFeature(MessageSchedulerHook.class, "Conversation",
+                () -> prefs.getBoolean("msg_scheduler", false),
+                () -> new MessageSchedulerHook(context, classLoader, prefs));
+
+        registerFeature(PinLimitBypassHook.class, "Conversation",
+                () -> prefs.getBoolean("pin_limit_bypass", false),
+                () -> new PinLimitBypassHook(context, classLoader, prefs));
 
         try {
             boolean installed = NewChatFeature.install(classLoader, prefs);
@@ -393,6 +443,14 @@ public final class FeatureRegistry {
                 () -> prefs.getBoolean("download_profile", false),
                 () -> new ProfilePhotoDownloadHook(context, classLoader, prefs));
 
+        registerFeature(MediaAutoDownloadHook.class, "Media",
+                () -> prefs.getBoolean("media_auto_download", false),
+                () -> new MediaAutoDownloadHook(context, classLoader, prefs));
+
+        registerFeature(StatusSchedulerHook.class, "Media",
+                () -> prefs.getBoolean("status_scheduler", false),
+                () -> new StatusSchedulerHook(context, classLoader, prefs));
+
         try {
             AudioToVoiceStatusFeature.install(context, classLoader, prefs);
             features.add(new FeatureEntry("Audio to Voice Status", "AudioToVoiceStatusFeature", "Media", "ACTIVE"));
@@ -424,6 +482,14 @@ public final class FeatureRegistry {
 
         registerFeature(TaskerIntegrationHook.class, "Automation",
                 () -> new TaskerIntegrationHook(context, classLoader, prefs));
+
+        registerFeature(AutoReplyHook.class, "Automation",
+                () -> prefs.getBoolean("auto_reply", false),
+                () -> new AutoReplyHook(context, classLoader, prefs));
+
+        registerFeature(MultiAccountSupportHook.class, "Automation",
+                () -> prefs.getBoolean("multi_account_support", false),
+                () -> new MultiAccountSupportHook(context, classLoader, prefs));
 
         registerFeature(ChatBubbleColorsHook.class, "Customization",
                 () -> new ChatBubbleColorsHook(context, classLoader, prefs));
@@ -478,6 +544,10 @@ public final class FeatureRegistry {
         registerFeature(FloatingBottomBarHook.class, "Customization",
                 () -> prefs.getBoolean("floating_bottom_bar", false),
                 () -> new FloatingBottomBarHook(context, classLoader, prefs));
+
+        registerFeature(FloatingBottomBarCompletionHook.class, "Customization",
+                () -> prefs.getBoolean("floating_bottom_bar_completion", false),
+                () -> new FloatingBottomBarCompletionHook(context, classLoader, prefs));
 
         registerFeature(FilterItemsHook.class, "Customization",
                 () -> new FilterItemsHook(context, classLoader, prefs));
